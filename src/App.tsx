@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import Project from './Project'
+import '@fontsource/noto-serif'
 
 interface pinnedRepo {
   owner: string
@@ -21,15 +22,17 @@ const App: React.FC = () => {
   }, [])
 
   return (
-    <div className="px-12 py-24 flex min-h-screen items-center flex-col gap-8 font-serif">
+    <div className="px-8 py-24 flex min-h-screen items-center flex-col gap-8 font-['Noto_Serif']">
       <a href="https://github.com/playreact">
-        <h1 className="font-bold text-4xl text-success">Play React</h1>
+        <h1 className="font-bold text-4xl text-accent hover:text-info">Play React</h1>
       </a>
       <p className="text-xl text-center">A collection of React-based apps 🕹️</p>
 
-      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2'>
+      <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
         {
-          pinnedRepos.map(repo => <Project key={repo.repo} name={repo.repo} description={repo.description} stars={repo.stars} language={repo.language} />)
+          pinnedRepos.map(repo =>
+            <Project key={repo.repo} name={repo.repo} description={repo.description} stars={repo.stars} language={repo.language} />,
+          )
         }
       </div>
     </div>
