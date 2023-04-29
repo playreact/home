@@ -26,7 +26,7 @@ const App: React.FC = () => {
       <a href="https://github.com/playreact">
         <h1 className="font-bold text-4xl text-accent hover:text-info">Play React</h1>
       </a>
-      <p className="text-xl text-center">A collection of React-based apps 🕹️</p>
+      <p className="text-lg text-center">A collection of React-based apps 🕹️</p>
 
       <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
         {
