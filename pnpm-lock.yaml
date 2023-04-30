@@ -1,9 +1,15 @@
 lockfileVersion: '6.0'
 
 dependencies:
-  '@fontsource/noto-serif':
-    specifier: ^4.5.11
-    version: 4.5.11
+  '@fontsource/bagnard':
+    specifier: ^4.5.4
+    version: 4.5.4
+  '@fontsource/dejavu-serif':
+    specifier: ^4.5.4
+    version: 4.5.4
+  '@fontsource/youngserif':
+    specifier: ^4.5.2
+    version: 4.5.2
   daisyui:
     specifier: ^2.51.5
     version: 2.51.5(autoprefixer@10.4.14)(postcss@8.4.21)
@@ -400,8 +406,16 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fontsource/noto-serif@4.5.11:
-    resolution: {integrity: sha512-Cq7M8oD0eNQbsQUJ6RVAi78Iw7DiVHrDKHkNyAW78jJ4UvIPNASApBsrhYvaExa9eD+Efd/kwhm+CWSImo5GtQ==}
+  /@fontsource/bagnard@4.5.4:
+    resolution: {integrity: sha512-BYLaN8ZRMI9ntOncCZfpKA6zJmdzWqPZdb7Mr2xG09twAcI6F69MWORGG39EEJn+pU1DqXn6ajTHrmPOY+mmvw==}
+    dev: false
+
+  /@fontsource/dejavu-serif@4.5.4:
+    resolution: {integrity: sha512-qsN6FvT20RHDxNe0HFTzdRBUCYLI1dKaXbRTK7Ia6X71EL8rZ2ayuKr0lrOD4OfY5WYQWVIsRWEhzGP8TBf39w==}
+    dev: false
+
+  /@fontsource/youngserif@4.5.2:
+    resolution: {integrity: sha512-AlDhMaPubKso/J07Byfg39c0mF+XEYoOh2PisbHG6ia7Bf/bpA6G89rkeNDJYSo4dLDgslf/fIHhyjanoVSFfA==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.8:
