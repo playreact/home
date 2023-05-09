@@ -1,4 +1,6 @@
 {
+  "name": "playreact-home",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -10,7 +12,8 @@
     "@fontsource/bagnard": "^4.5.4",
     "daisyui": "^2.51.6",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "swr": "^2.1.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.38.6",

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import Project from './Project'
 import '@fontsource/bagnard'
+import useSWR from 'swr'
 
 interface pinnedRepo {
   owner: string
@@ -13,21 +14,18 @@ interface pinnedRepo {
 }
 
 const App: React.FC = () => {
-  const [pinnedRepos, setPinnedRepos] = useState<pinnedRepo[]>([])
-
-  useEffect(() => {
-    fetch('https://gh-pinned.nxl.sh/api/user/playreact')
-      .then(response => response.json())
-      .then(data => setPinnedRepos(data))
-  }, [])
+  const { data: pinnedRepos } = useSWR<pinnedRepo[]>(
+    'https://gh-pinned.nxl.sh/api/user/playreact',
+    url => fetch(url).then(res => res.json())
+  )
 
   return (
-    <div className="px-8 py-24 flex min-h-screen items-center flex-col gap-10 font-['Bagnard']">
-      <h1 className="font-bold text-5xl text-success"><a href="https://github.com/playreact">Play React</a></h1>
-      <p className="text-2xl">A collection of React-based apps 🕹️</p>
-      <div className='grid grid-cols-1 gap-6 md:grid-cols-2'>
+    <div className="px-8 py-20 flex min-h-screen items-center flex-col gap-8 font-['Bagnard']">
+      <h1 className="font-bold text-4xl text-success"><a href="https://github.com/playreact">Play React</a></h1>
+      <p className="text-xl">A collection of React-based apps 🕹️</p>
+      <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
         {
-          pinnedRepos.map(repo =>
+          pinnedRepos?.map(repo =>
             <Project key={repo.repo} name={repo.repo} description={repo.description} stars={repo.stars} language={repo.language} />,
           )
         }
