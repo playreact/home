@@ -1,8 +1,4 @@
 {
-  "name": "playreact-template",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -12,20 +8,20 @@
   },
   "dependencies": {
     "@fontsource/bagnard": "^4.5.4",
-    "daisyui": "^2.51.5",
+    "daisyui": "^2.51.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.2",
-    "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react-swc": "^3.0.0",
+    "@antfu/eslint-config": "^0.38.6",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react-swc": "^3.3.1",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.37.0",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.1",
-    "typescript": "^5.0.0",
-    "vite": "^4.2.0"
+    "eslint": "^8.40.0",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.5"
   }
 }
