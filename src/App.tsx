@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react'
+import useSWR from 'swr'
 import Project from './Project'
 import '@fontsource/bagnard'
-import useSWR from 'swr'
 
 interface pinnedRepo {
   owner: string
@@ -16,7 +15,7 @@ interface pinnedRepo {
 const App: React.FC = () => {
   const { data: pinnedRepos } = useSWR<pinnedRepo[]>(
     'https://gh-pinned.nxl.sh/api/user/playreact',
-    url => fetch(url).then(res => res.json())
+    url => fetch(url).then(res => res.json()),
   )
 
   return (
@@ -25,9 +24,11 @@ const App: React.FC = () => {
       <p className="text-xl">A collection of React-based apps 🕹️</p>
       <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
         {
-          pinnedRepos?.map(repo =>
-            <Project key={repo.repo} name={repo.repo} description={repo.description} stars={repo.stars} language={repo.language} />,
-          )
+          pinnedRepos
+            ? pinnedRepos.map(repo =>
+              <Project key={repo.repo} name={repo.repo} description={repo.description} stars={repo.stars} language={repo.language} />,
+            )
+            : <span className="loading loading-ring loading-lg"></span>
         }
       </div>
     </div>
