@@ -21,14 +21,14 @@ const App: React.FC = () => {
   return (
     <div className="px-8 py-20 flex min-h-screen items-center flex-col gap-8 font-['Bagnard']">
       <h1 className="font-bold text-4xl text-success"><a href="https://github.com/playreact">Play React</a></h1>
-      <p className="text-xl">A collection of React-based apps 🕹️</p>
+      <p className="text-xl">A collection of React apps 🕹️</p>
       <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
         {
           pinnedRepos
             ? pinnedRepos.map(repo =>
               <Project key={repo.repo} name={repo.repo} description={repo.description} stars={repo.stars} language={repo.language} />,
             )
-            : <span className="loading loading-ring loading-lg"></span>
+            : <div className="loading loading-ring loading-lg"></div>
         }
       </div>
     </div>
