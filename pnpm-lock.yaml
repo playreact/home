@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@fontsource/bagnard':
-    specifier: ^5.0.0
-    version: 5.0.0
+    specifier: ^5.0.2
+    version: 5.0.2
   daisyui:
-    specifier: ^3.0.0
-    version: 3.0.0(postcss@8.4.24)
+    specifier: ^3.0.2
+    version: 3.0.2(postcss@8.4.24)
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -411,8 +411,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fontsource/bagnard@5.0.0:
-    resolution: {integrity: sha512-hs6WRB7n/C69USkgYsXbXh2CNxzUuiYxagFwQK74EKa/N9yQ+ZwPAxMPFfzue+pONSB+wS1fnPjn7537MAREGw==}
+  /@fontsource/bagnard@5.0.2:
+    resolution: {integrity: sha512-f1J3zZ6dYq5si8EcY1ZX/wpweUnrVICKNZa4uDuTKc//jp+buC9kXcjzDg/Hu2NF/BDtRiiDSuDLGw3HygUBqA==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:
@@ -1082,8 +1082,8 @@ packages:
     resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
     dev: true
 
-  /daisyui@3.0.0(postcss@8.4.24):
-    resolution: {integrity: sha512-EuNK9JQd5yrPLDynAPQkG/29vjZXFWhBK4HXvM83d9oJU0EmF35UNLLs0cslBFfLK4b+bOuhgoYPJ4BjytOxNQ==}
+  /daisyui@3.0.2(postcss@8.4.24):
+    resolution: {integrity: sha512-0X+0PkgTIWevt5m4AZCCgvqI5pKRormTEhdfmc31dwfLNq6uY4wENCXAtcXzZMKt7JBKcVTWlj/uDrOjj6XpUQ==}
     peerDependencies:
       postcss: ^8
     dependencies:
